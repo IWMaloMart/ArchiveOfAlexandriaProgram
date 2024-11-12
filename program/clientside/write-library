@@ -1,0 +1,35 @@
+$('#data-submit').click(function(){
+    var isbn = $('#isbn').val();
+    var title = $('#title').val();
+    var author = $('#author').val();
+    var genre = $('#genre').val();
+    var media = $('#media').val();
+
+    var jsonString = {isbn:isbn, title:title, author:author, genre:genre, media:media};
+    
+    $.ajax({
+        url: libraryURL + "/write-record-mysql",
+        type: "post",
+        data: jsonString,
+        success: function(response){
+            var test1 = "";
+            alert(response);
+        },
+
+        err
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+})
